@@ -10,13 +10,13 @@ const Country = ({country}) => {
          setVisited(!visited)
     }
     return (
-        <div className='country-container'>
+       <div className={`country-container ${visited ? 'visited' : ''}`}>
             <h3>Name:{name}</h3>
          <img className='country' src={`https://flagdex.net${flag}`} alt={name} />
         <p>Code:{iso3}</p>
         <button onClick={handleClick}>Visited</button>
           {
-         visited ? ' I have a visited' : 'not Visited'
+         visited ? ' I have a visited' : 'Not Visited'
           }
         </div>
     );

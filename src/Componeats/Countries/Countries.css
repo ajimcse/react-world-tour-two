@@ -5,3 +5,7 @@
     align-items: center;
     border: 2px solid;
 }
+.visited{
+   background-color:goldenrod ; 
+   color: black;
+}
