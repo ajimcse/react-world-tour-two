@@ -6,10 +6,12 @@ import './Countries.css'
 const Countries = () => {
 
     const [countries, setCountries] = useState([]);
-    const [visitedCountry, SetVisitedCountary] = useState(false);
+    const [visitedCountry, setVisitedCountary] = useState([]);
 
-    const handleVisitedCountry = () => {
-        console.log('add this to your visited country')
+    const handleVisitedCountry = country => {
+        console.log(country);
+        const newVisitedCountries = [...visitedCountry, country];
+        setVisitedCountary(newVisitedCountries);
     }
 
     useEffect(() => {
@@ -19,20 +21,27 @@ const Countries = () => {
             .catch(error => console.log(error));
     }, []);
 
-
     return (
         <div>
             <h2>Countries:{countries.length}</h2>
 
             <div>
-                <h1>Visited Countries</h1>
+                <h1>Visited Countries:{visitedCountry.length}</h1>
+                {
+                    visitedCountry.map(country =>
+                        <div className="mark-country" key={country.iso2}>
+                        <h2>{country.name}</h2>
+                       <img src={`https://flagdex.net${country.flag}`} alt={country.name} />
+                        </div>
+                    )
+                }
             </div>
             <div>
                 <div className="countries-container">
 
                     {
                         countries.map(country => <Country key={country.iso2} country={country}
-                        handleVisitedCountry={handleVisitedCountry}
+                            handleVisitedCountry={handleVisitedCountry}
                         ></Country>)
                     }
                 </div>
