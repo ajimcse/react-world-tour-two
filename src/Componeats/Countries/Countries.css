@@ -4,6 +4,8 @@
     gap: 10px;
     align-items: center;
     border: 2px solid;
+    border-radius: 10px;
+    margin: 10px;
 }
 .visited{
    background-color:goldenrod ; 
@@ -13,4 +15,15 @@
      width: 200px;
     height: 100px;
     
+}
+.mark-visited-country {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid;
+  padding: 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }

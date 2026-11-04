@@ -10,3 +10,15 @@
     height: 100px;
 
 }
+.visited{
+   background-color:goldenrod ; 
+   color: black;
+}
+.country-button{
+    padding: 6px;
+    margin: 5px;
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}

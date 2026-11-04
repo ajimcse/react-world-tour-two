@@ -24,9 +24,9 @@ const Countries = () => {
     return (
         <div>
             <h2>Countries:{countries.length}</h2>
-
-            <div>
-                <h1>Visited Countries:{visitedCountry.length}</h1>
+            <h1>Visited Countries:{visitedCountry.length}</h1>
+                
+            <div className="mark-visited-country">
                 {
                     visitedCountry.map(country =>
                         <div className="mark-country" key={country.iso2}>

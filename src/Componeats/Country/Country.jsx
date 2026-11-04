@@ -16,9 +16,9 @@ const Country = ({ country , handleVisitedCountry }) => {
       <h3 style={{ color: visited ? 'purple' : 'red' }}>Name: {name}</h3>
       <img className='country' src={`https://flagdex.net${flag}`} alt={name} />
       <p>Code: {iso3}</p>
-      <button onClick={handleClick}>Visited</button>
-      <br />
-      <button onClick={()=>handleVisitedCountry(country)}>Mark Visited </button>
+      <button onClick={handleClick}> Visited</button>
+     
+     <button className='country-button' onClick={() => handleVisitedCountry(country)}>Mark Visited</button>
       {
         visited ? ' I have visited' : 'Not Visited'
       }
